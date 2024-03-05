@@ -360,14 +360,18 @@ margin-right: 20px;
             listItem.textContent = project.topic;
 
             listItem.onclick = function () {
+
+                
+    let hidejh = document.querySelector(".hide");
+    hidejh.classList.remove('hide');
                 // Set values for each span
                 document.querySelector(".tospan").innerText = project.topic;
                 document.querySelector(".tecspan").innerText = project.textstack;
                 document.querySelector(".imspan").innerText = project.impact;
-                document.querySelector(".namespan").innerText = project.name || "";
-                document.querySelector(".branchspan").innerText = project.branch || "";
-                document.querySelector(".yearspan").innerText = project.year || "";
-                document.querySelector(".collegespan").innerText = project.college || "";
+                document.querySelector(".namespan").innerText = project.name;
+                document.querySelector(".branchspan").innerText = project.branch;
+                document.querySelector(".yearspan").innerText = project.year;
+                document.querySelector(".collegespan").innerText = project.college;
 
                 console.log(project.topic);
             };
@@ -375,6 +379,7 @@ margin-right: 20px;
             listproject.appendChild(listItem);
         });
     });
+
 
     // Set username (this part was corrected)
     document.addEventListener("DOMContentLoaded", function () {
