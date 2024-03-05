@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>docs</title>
+    <title>Portfolio Site</title>
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -343,45 +343,45 @@ margin-right: 20px;
     margin-right: 7px;
 }
 </style>
- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let listproject = document.querySelector(".contentlist");
-            const projects = [
-                { topic: "Solar Energy Monitoring System", textstack: "Photovoltaic panels & Solar thermal collectors", impact: "Optimizing energy production and reducing dependency on fossil fuels", name: "Priya Patel", branch: "Electrical", year: "4", college: "ABC University" },
-                { topic: "Wind Farm Control System", textstack: "Onshore & Offshore wind turbines", impact: "Enhancing wind energy utilization and mitigating grid instability", name: "Rajesh Kumar", branch: "Mechanical", year: "3", college: "XYZ Institute of Technology" },
-                { topic: "Bioenergy Harvesting System", textstack: "Biogas plants & Biomass boilers", impact: "Harnessing organic waste for sustainable energy generation", name: "Maria Gonzalez", branch: "Chemical", year: "4", college: "PQR College of Engineering" },
-                { topic: "Wave Energy Converter", textstack: "Point absorbers & Oscillating water columns", impact: "Tapping into oceanic energy resources with minimal environmental impact", name: "Liam Smith", branch: "Civil", year: "3", college: "LMN University" },
-                { topic: "Smart Grid Integration", textstack: "Distributed generation & Energy storage systems", impact: "Improving grid reliability and accommodating renewable energy sources", name: "Anna Wang", branch: "Computer Science", year: "4", college: "STU College of Technology" },
-            ];
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let listproject = document.querySelector(".contentlist");
+        const projects = [
+            { topic: "Solar Energy Monitoring System", textstack: "Photovoltaic panels & Solar thermal collectors", impact: "Optimizing energy production and reducing dependency on fossil fuels", name: "Priya Patel", branch: "Electrical", year: "4", college: "ABC University" },
+            { topic: "Wind Farm Control System", textstack: "Onshore & Offshore wind turbines", impact: "Enhancing wind energy utilization and mitigating grid instability", name: "Rajesh Kumar", branch: "Mechanical", year: "3", college: "XYZ Institute of Technology" },
+            { topic: "Bioenergy Harvesting System", textstack: "Biogas plants & Biomass boilers", impact: "Harnessing organic waste for sustainable energy generation", name: "Maria Gonzalez", branch: "Chemical", year: "4", college: "PQR College of Engineering" },
+            { topic: "Wave Energy Converter", textstack: "Point absorbers & Oscillating water columns", impact: "Tapping into oceanic energy resources with minimal environmental impact", name: "Liam Smith", branch: "Civil", year: "3", college: "LMN University" },
+            { topic: "Smart Grid Integration", textstack: "Distributed generation & Energy storage systems", impact: "Improving grid reliability and accommodating renewable energy sources", name: "Anna Wang", branch: "Computer Science", year: "4", college: "STU College of Technology" },
+        ];
 
-          
-            projects.forEach((project, index) => {
-                const listItem = document.createElement("li");
-                listItem.textContent = project.topic;
+        // Accessing and printing the project names with onclick attribute
+        projects.forEach((project, index) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = project.topic;
 
-                listItem.onclick = function () {
-                    // Set values for each span
-                    document.querySelector(".tospan").innerText = project.topic;
-                    document.querySelector(".tecspan").innerText = project.textstack;
-                    document.querySelector(".imspan").innerText = project.impact;
-                    document.querySelector(".namespan").innerText = project.name || "";
-                    document.querySelector(".branchspan").innerText = project.branch || "";
-                    document.querySelector(".yearspan").innerText = project.year || "";
-                    document.querySelector(".collegespan").innerText = project.college || "";
+            listItem.onclick = function () {
+                // Set values for each span
+                document.querySelector(".tospan").innerText = project.topic;
+                document.querySelector(".tecspan").innerText = project.textstack;
+                document.querySelector(".imspan").innerText = project.impact;
+                document.querySelector(".namespan").innerText = project.name || "";
+                document.querySelector(".branchspan").innerText = project.branch || "";
+                document.querySelector(".yearspan").innerText = project.year || "";
+                document.querySelector(".collegespan").innerText = project.college || "";
 
-                    console.log(project.topic);
-                };
+                console.log(project.topic);
+            };
 
-                listproject.appendChild(listItem);
-            });
+            listproject.appendChild(listItem);
         });
+    });
 
-        
-        document.addEventListener("DOMContentLoaded", function () {
-            let username = "YourUsername"; // Replace with the actual username
-            document.querySelector(".mainuse").innerText = username;
-        });
-    </script>
+    // Set username (this part was corrected)
+    document.addEventListener("DOMContentLoaded", function () {
+        let username = "YourUsername";
+        document.querySelector(".mainuse").innerText = username;
+    });
+</script>
 </head>
 
 <body>
