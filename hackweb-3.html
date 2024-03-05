@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Site</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Protest+Strike&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+
+.mainContainer {
+width: 100%;
+height: auto;
+}
+
+.header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #725fd1;
+padding: 15px 50px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+position: sticky;
+top: 0;
+
+}
+
+.menu-icon {
+display: none;
+
+}
+
+.header-content {
+display: flex;
+align-items: center;
+}
+
+.header-content i {
+font-size: 34px;
+margin-right: 20px;
+
+}
+
+.login{
+    display: flex;
+    justify-content: end;
+   
+    width: 30%;
+    color: white;
+}
+
+.studentLogin a{
+    font-size: 1.5rem;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.UniversityLogin a{
+    font-size: 1.5rem;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.platform{
+   margin-right: 12%;
+   color: white;
+}
+
+
+.navbar {
+    background-color: transparent;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+    
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (max-width: 7068px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu {
+    
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 3.4%;
+            background-color: black;
+            padding: 10px;
+            width: 150px;
+            color: black;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+
+.mainBody {
+    margin: 20px 0px 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.searchBar {
+    width: 30%;
+    height: auto;
+    margin-left: 1%;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1%;
+}
+
+.search input {
+    width: 80%;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.search button {
+    color: white;
+    background-color: black;
+    margin-left: 5px;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.searchContent {
+    width: 100%;
+    background-color: transparent;
+    margin-top: 10%;
+}
+
+.searchContent ol {
+    width: 95%;
+    background-color: transparent;
+    height: 29rem;
+    margin-top: 5%;
+    margin-left: 1.5%;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.searchContent ol li {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 90%;
+    padding: 2%;
+    border-radius: 6px;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+.searchContent ol li button {
+    justify-content: space-between;
+}
+
+.projectname p{
+    width: 25%;
+    border: 1px solid black;
+}
+
+
+.details {
+    width: 60%;
+    background-color: transparent;
+    display: inline-block;
+    height: 33rem;
+    margin-top: 4%;
+    margin-left: 1.5%;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    margin-left: 50px;
+    
+}
+
+.hide{
+    width: 60%;
+    background-color: transparent;
+    display: inline-block;
+    height: 33rem;
+    margin-top: 4%;
+    margin-left: 1.5%;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    margin-left: 50px;
+    visibility: hidden;
+}
+.topic{
+    margin: 3% 0 0 3%;
+    display: flex;
+}
+
+.topic span{
+
+    margin-left: 10px;
+    font-weight: 550;
+
+    margin-right: 7px;
+}
+
+.AboutProject{
+    margin: 3% 2% 2% 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.techStack{
+    margin: 3% 2% 2% 0%;
+    display: flex;
+}
+
+.techStack span{
+    margin-left: 15px;
+    margin-top: 0%;
+    font-weight: 550;
+    font-size: 20px;
+    margin-right: 7px;
+
+}
+.Impacts{
+    margin: 3% 2% 0% 0%;
+    display: flex;
+}
+
+.Impacts span{
+    margin-left: 15px;
+    margin-top: 2px;
+    font-weight: 550;
+    font-size: 18px;
+    margin-right: 7px;
+}
+.AboutStudent{
+    display: flex;
+    flex-direction: column;
+    margin: 4% 0% 0% 3%;
+}
+.name{
+    margin-top: 5px;
+    display: flex;
+}
+.name span{
+    margin-left: 15px;
+    margin-top: 2px;
+    font-weight: 450;
+    font-size: 15px;
+    margin-right: 7px;
+}
+
+.year{
+    margin-top: 5px;
+    display: flex;
+}
+.year span{
+    margin-left: 15px;
+    margin-top: 2px;
+    font-weight: 550;
+    font-size: 15px;
+    margin-right: 7px;
+
+}
+
+.coName{
+    margin-top: 5px;
+    display: flex;
+}
+.coName span{
+    margin-left: 15px;
+    margin-top: 2px;
+    font-weight: 550;
+    font-size: 15px;
+    margin-right: 7px;
+}
+
+.branch{
+    margin-top: 5px;
+    display: flex;
+}
+.branch span{
+    margin-left: 15px;
+    margin-top: 2px;
+    font-weight: 550;
+    font-size: 15px;
+    margin-right: 7px;
+}
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    let listproject = document.querySelector(".contentlist");
+    const projects = [
+        { projectName: "Smart Home Automation system", textstack: "python", impact: "provide modern technology for daily life purposes", name: "Saket Razdan", branchL: "AIML", year: "1", college: "Jhulelal Institute of Technology" },
+        { projectName: "Project 10", project: "date" }
+    ];
+
+    // Accessing and printing the project names with onclick attribute
+    projects.forEach((project, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = project.projectName;
+
+        listItem.onclick = function() {
+            // Set values for each span
+            document.querySelector(".tospan").innerText = project.projectName;
+            document.querySelector(".tecspan").innerText = project.textstack;
+            document.querySelector(".imspan").innerText = project.impact;
+            document.querySelector(".namespan").innerText = project.name || "";
+            document.querySelector(".branchspan").innerText = project.branchL || "";
+            document.querySelector(".yearspan").innerText = project.year || "";
+            document.querySelector(".collegespan").innerText = project.college || "";
+
+            console.log(project.project);
+        };
+
+        listproject.appendChild(listItem);
+    });
+});
+
+let username = document.getElementsByClassName("username");
+document.getElementsByClassName("mainuse").innerText = username;
+</script>
+
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="header">
+        
+            <div class="platform">
+                <h1 style="text-align: center;">Online Integrated Platform</h1>
+            </div>
+
+          <div class="login">
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="header-content">
+                <i class="fas fa-user"></i>
+                <h3 class="mainuse"></h3>
+            </div>
+        
+       </div>
+        </div>
+        <div class="mainBody">
+            <div class="searchBar">
+                <div class="search">
+
+                    <input placeholder="Type the topic">
+                    <button><b>Search</b></button>
+                </div>
+                <div class="searchContent">
+
+                    <ol class="contentlist">
+                       
+                    </ol>
+     
+
+                </div>
+            </div>
+            <div class="details ">
+                <div class="hide">
+                <div class="topic">
+                    <h1>Topic: </h1>
+                    <span class="tospan"></span>
+                </div>
+                <div class="AboutProject">
+                    <h1>About Project:</h1>
+                    <br>
+                    <div class="techStack">
+                        <h2>Tech Stack:</h2>
+                        
+                        <span class="tecspan"> </span>
+                    </div>
+                    <div class="Impacts">
+                        <h2>Impact:</h2>
+                        <span class="imspan"> </span>
+                    </div>
+                </div>
+                <div class="AboutStudent">
+                    <h1>About Student:</h1>
+                    <div class="name">
+                        <h3>Student Name:</h3><span class="namespan"></span>
+                    </div>
+                    
+                    
+                    <div class="branch">
+                        <h3>Branch:</h3><span class="branchspan"></span>
+                    </div>
+                    
+                    <div class="year">
+                        <h3>Year:</h3><span class="yearspan"></span>
+                    </div>
+                    
+                    <div class="coName">
+                        <h3>college Name:</h3><span class="collegespan"></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+  
+
+</body>
+</html>
