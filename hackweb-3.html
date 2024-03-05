@@ -348,18 +348,55 @@ margin-right: 20px;
     document.addEventListener("DOMContentLoaded", function() {
     let listproject = document.querySelector(".contentlist");
     const projects = [
-        { projectName: "Smart Home Automation system", textstack: "python", impact: "provide modern technology for daily life purposes", name: "Saket Razdan", branchL: "AIML", year: "1", college: "Jhulelal Institute of Technology" },
-        { projectName: "Project 10", project: "date" }
+       {topic:"Solar Energy Monitoring System",
+textstack:"Photovoltaic panels & Solar thermal collectors",
+impact:"Optimizing energy production and reducing dependency on fossil fuels",
+student name:"Priya Patel",
+branch:"Electrical",
+year:"4",
+college:"ABC University"},
+
+{topic:"Wind Farm Control System",
+textstack:"Onshore & Offshore wind turbines",
+impact:"Enhancing wind energy utilization and mitigating grid instability",
+student name:"Rajesh Kumar",
+branch:"Mechanical",
+year:"3",
+college:"XYZ Institute of Technology"},
+
+{topic:"Bioenergy Harvesting System",
+textstack:"Biogas plants & Biomass boilers",
+impact:"Harnessing organic waste for sustainable energy generation",
+student name:"Maria Gonzalez",
+branch:"Chemical",
+year:"4",
+college:"PQR College of Engineering"},
+
+{topic:"Wave Energy Converter",
+textstack:"Point absorbers & Oscillating water columns",
+impact:"Tapping into oceanic energy resources with minimal environmental impact",
+student name:"Liam Smith",
+branch:"Civil",
+year:"3",
+college:"LMN University"},
+
+{topic:"Smart Grid Integration",
+textstack:"Distributed generation & Energy storage systems",
+impact:"Improving grid reliability and accommodating renewable energy sources",
+student name:"Anna Wang",
+branch:"Computer Science",
+year:"4",
+college:"STU College of Technology"},
     ];
 
     // Accessing and printing the project names with onclick attribute
     projects.forEach((project, index) => {
         const listItem = document.createElement("li");
-        listItem.textContent = project.projectName;
+        listItem.textContent = project.topic;
 
         listItem.onclick = function() {
             // Set values for each span
-            document.querySelector(".tospan").innerText = project.projectName;
+            document.querySelector(".tospan").innerText = project.topic;
             document.querySelector(".tecspan").innerText = project.textstack;
             document.querySelector(".imspan").innerText = project.impact;
             document.querySelector(".namespan").innerText = project.name || "";
